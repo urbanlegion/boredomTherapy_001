@@ -1,0 +1,152 @@
+/*@include keyframes(slide-down) {
+  0%   { top: -80px; }
+  100% { top: -40px ; }
+}*/
+@include keyframes(slide-left1) {
+   0%   { right: 15px; }
+   100% {
+     right: 165px;
+
+   }
+ }
+@include keyframes(slide-left2) {
+   0%   { right: 15px; }
+   100% {
+     right: 115px;
+
+   }
+ }
+@include keyframes(slide-left3) {
+   0%   { right: 15px; }
+   100% {
+     right: 65px;
+
+   }
+ }
+@include keyframes(slide-left4) {
+   0%   { right: 15px; }
+   100% {
+     right: 15px;
+
+   }
+ }
+
+#main {
+  border-bottom: 4px solid $boredom_blue;
+
+  .mobile_header {
+    display: none;
+    padding: 20px 0;
+    & img {
+      //width: 440px;
+      width: 75%;
+    }
+  }
+  .desktop_header {
+    padding: 15px 0;
+    & div {
+      position: relative;
+      height: 70px;
+      &:nth-child(1) {
+        & img {
+          position: absolute;
+          right: 0px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      &:nth-child(2) {
+        & ul {
+          width: 100%;
+          @include centerer;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          text-align: center;
+          & li {
+            margin: 0 10px;
+            display: inline;
+            & a {
+              text-decoration: none;
+              padding: 5px;
+              font-size: 17px;
+              color: $boredom_grey;
+              font-family: 'Lato', sans-serif;
+              font-weight: 700;
+              &:hover {
+                color: $boredom_blue;
+              }
+            }
+            &:nth-child(5), &:nth-child(6) {
+              border: 1px solid $boredom_blue;
+              @include border-radius(15px);
+              padding: 6px;
+              & a {
+                color: $boredom_blue;
+                &:hover {
+                  color: $boredom_grey;
+                }
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(3){
+
+        .link-box-wrapper{
+          position: relative;
+          .link-box{
+           /* @include animation('slide-down 1.8s ease');
+            animation-fill-mode: forwards;
+            animation-delay: 3s;*/
+            position: absolute;
+            right: 15px;
+            top:-40px;
+            background-color: $boredom_grey;
+            display: inline-block;
+            height: 100px;
+            /*
+            margin-top: -80px;
+            margin-right: 20px;*/
+
+            width: 28px;
+            @include border-bottom-radius(40px);
+            &:nth-child(1){
+              @include animation('slide-left1 1.8s ease');
+              animation-fill-mode: forwards;
+              animation-delay: 1.6s;
+
+            }
+            &:nth-child(2){
+              @include animation('slide-left2 1.8s ease');
+              animation-fill-mode: forwards;
+              animation-delay: 1.4s;
+
+            }
+            &:nth-child(3){
+              @include animation('slide-left3 1.8s ease');
+              animation-fill-mode: forwards;
+              animation-delay: 1.2s;
+            }
+            &:last-child{
+              background-color: $boredom_blue;
+              @include animation('slide-left4 1.8s ease');
+              animation-fill-mode: forwards;
+              animation-delay: 1s;
+            }
+            a{
+              color: #ffffff;
+              position: absolute;
+              left: 50%;
+              bottom: 3px;
+              transform: translate(-50%, -3px);
+              i{
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

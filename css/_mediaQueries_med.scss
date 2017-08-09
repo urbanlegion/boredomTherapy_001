@@ -1,0 +1,62 @@
+@media only screen
+and (min-device-width: 569px)
+and (max-device-width: 1025px)
+and (-webkit-min-device-pixel-ratio: 2) {
+/*  * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+  }*/
+  #main{
+    .desktop_header{display: none}
+    .mobile_header{
+      display: block;
+
+      background: linear-gradient(221deg, #7eb680, #30b2d1);
+      background-size: 400% 400%; -webkit-animation: AnimationName 30s ease infinite;
+      -moz-animation: AnimationName 30s ease infinite;
+      animation: AnimationName 30s ease infinite;
+
+      padding: 20px 0;
+      & img{
+        width: 350px;
+      }
+    }
+  }
+  .flex-btn {
+    top: 32px;
+    left: -85px;
+    & span{
+      background-color: #b2b2b2;
+      width: 45px;
+      height: 4px;
+      &:nth-child(1){
+        top: 2px;
+      }
+      &:nth-child(2){
+        top: 12px;
+      }
+      &:nth-child(3){
+        top: 22px;
+      }
+    }
+  }
+
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:93% 0%}
+  50%{background-position:0% 100%}
+  100%{background-position:93% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:93% 0%}
+  50%{background-position:0% 100%}
+  100%{background-position:93% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:93% 0%}
+  50%{background-position:0% 100%}
+  100%{background-position:93% 0%}
+}

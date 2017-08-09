@@ -1,0 +1,29 @@
+@media only screen and (min-device-width: 1026px) and (max-device-width: 1334px) and (-webkit-min-device-pixel-ratio: 2) {
+  #main {
+    .mobile_header {
+      display: none;
+    }
+    .desktop_header {
+      & > div {
+        &:nth-child(2) {
+          & ul {
+            & li {
+              margin: 0 3px;
+              & a {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1335px) and (-webkit-min-device-pixel-ratio: 2) {
+  #main {
+    .mobile_header {
+      display: none;
+    }
+  }
+}

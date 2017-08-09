@@ -1,0 +1,14 @@
+@media only screen
+and (min-device-width: 1026px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  //nothing happens 'till the full page loads.
+  .preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+  }
+}
+
+
+
